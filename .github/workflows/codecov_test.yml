@@ -33,7 +33,7 @@ jobs:
         shell: bash -l {0}
         working-directory: ./ccc/tests
         run: |
-          pytest -m 'not needs_puf' --pycodestyle --cov=./ --cov-report=xml
+          pytest test_calcfunctions.py -m 'not needs_puf' --pycodestyle --cov=./ --cov-report=xml
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
         with:
